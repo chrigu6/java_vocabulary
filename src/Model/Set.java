@@ -28,6 +28,11 @@ public class Set {
 		
 	}
 	
+	public String toString()
+	{
+		return this.name;
+	}
+	
 	//getters and setters
 	public String getName() {
 		return name;
