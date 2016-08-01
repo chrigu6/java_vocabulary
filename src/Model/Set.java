@@ -1,7 +1,8 @@
 package Model;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Set {
+public class Set implements Serializable{
 	private String name;
 	private Language firstLanguage;
 	private Language secondLanguage;

@@ -1,6 +1,8 @@
 package Model;
 
-public class Word {
+import java.io.Serializable;
+
+public class Word implements Serializable{
 	private String word;
 	private Language Language;
 	

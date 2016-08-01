@@ -1,7 +1,8 @@
 package Model;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Card {
+public class Card implements Serializable{
 	private Language firstLanguage;
 	private Language secondLanguage;
 	private Word firstLanguageWord;

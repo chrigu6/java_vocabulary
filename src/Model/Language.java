@@ -1,6 +1,8 @@
 package Model;
 
-public class Language {
+import java.io.Serializable;
+
+public class Language implements Serializable {
 	private String language;
 	
 	//Constructor
@@ -21,6 +23,11 @@ public class Language {
 	public String toString()
 	{
 		return this.language;
+	}
+	
+	public static void main(String[] args)
+	{
+		
 	}
 
 }

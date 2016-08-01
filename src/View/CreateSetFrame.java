@@ -12,6 +12,8 @@ import javax.swing.JTextField;
 import javax.swing.event.ListDataListener;
 
 import java.awt.event.WindowAdapter;
+import java.util.ArrayList;
+
 import Model.Language;
 import Model.Set;
 
@@ -32,7 +34,7 @@ public class CreateSetFrame extends JFrame {
 	
 	JButton createSetButton;
 	
-	public CreateSetFrame(String name){		
+	public CreateSetFrame(String name, ArrayList<Language> languages){		
 		super(name);
 		this.setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
@@ -54,6 +56,7 @@ public class CreateSetFrame extends JFrame {
 		this.firstLanguageComboBox = new JComboBox<Language>();
 		c.gridx = 1;
 		c.gridy = 1;
+		this.firstLanguageComboBox.setModel(new DefaultComboBoxModel<Language>(languages.toArray(new Language[3])));
 		this.add(this.firstLanguageComboBox, c);
 		this.firstLanguageTextField = new JTextField("Enter a new Language ...");
 		c.gridx = 2;
@@ -75,6 +78,7 @@ public class CreateSetFrame extends JFrame {
 		this.secondLanguageTextField = new JTextField("Enter a new Language ...");
 		c.gridx = 2;
 		c.gridy = 2;
+		this.secondLanguageComboBox.setModel(new DefaultComboBoxModel<Language>(languages.toArray(new Language[3])));
 		this.add(this.secondLanguageTextField, c);
 		this.addSecondLanguageButton = new JButton("Add new Language");
 		c.gridx = 3;
