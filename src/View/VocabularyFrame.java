@@ -1,10 +1,7 @@
 package View;
 
-import Model.Set;
-
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
@@ -14,12 +11,15 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import Model.Set;
+
 public class VocabularyFrame extends JFrame {
 	
 	Set[] sets;
 	JMenuBar menuBar;
 	JMenu menu;
 	JMenuItem loadMenuItem;
+	JMenuItem saveMenuItem;
 	JList<Set> setJList;
 	JButton addNewSetButton;
 	JButton openSetButton;
@@ -38,12 +38,11 @@ public class VocabularyFrame extends JFrame {
 		this.menu = new JMenu("File");
 		this.loadMenuItem = new JMenuItem("Load Data");
 		this.menu.add(this.loadMenuItem);
+		this.saveMenuItem = new JMenuItem("Save Data");
+		this.menu.add(this.saveMenuItem);
 		this.menuBar.add(this.menu);
-		c.gridx = 0;
-		c.gridy = 0;
 		this.add(this.menuBar);
-		
-		this.setJList = new JList<Set>(sets);
+		this.setJList = new JList<Set>();
 		c.gridx = 0;
 		c.gridy = 1;
 		this.add(this.setJList, c);
@@ -58,6 +57,7 @@ public class VocabularyFrame extends JFrame {
 		c.gridy = 2;
 		this.add(this.openSetButton, c);
 		
+		this.pack();
 		this.setVisible(true);		
 	}
 	
@@ -67,6 +67,12 @@ public class VocabularyFrame extends JFrame {
 	{
 		this.loadMenuItem.addActionListener(listener);
 	}
+	
+	public void addSaveMenuItemClicked(ActionListener listener)
+	{
+		this.saveMenuItem.addActionListener(listener);
+	}
+	
 	//Buttons
 	public void addNewSetButtonClickedActionListener(ActionListener listener)
 	{

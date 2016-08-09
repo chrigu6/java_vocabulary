@@ -15,6 +15,19 @@ public class Card implements Serializable{
 		this.secondLanguage = secondLanguage;
 	}
 	
+	public Card(Language firstLanguage, Language secondLanguage, Word firstWord, String[] secondWords)
+	{
+		this.firstLanguage = firstLanguage;
+		this.secondLanguage = secondLanguage;
+		this.firstLanguageWord = firstWord;
+		this.secondLanguageWords = new ArrayList<Word>();
+		
+		for(int i = 0; i < secondWords.length; i++)
+		{
+			this.secondLanguageWords.add(new Word(secondWords[i]));
+		}
+	}
+	
 	//getters and setters
 	public Language getFirstLanguage() {
 		return firstLanguage;

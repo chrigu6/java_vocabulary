@@ -29,6 +29,11 @@ public class Set implements Serializable{
 		
 	}
 	
+	public void addCard(Card card)
+	{
+		this.cards.add(card);
+	}
+	
 	public String toString()
 	{
 		return this.name;

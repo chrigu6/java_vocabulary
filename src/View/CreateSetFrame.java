@@ -2,20 +2,17 @@ package View;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.event.ActionListener;import javax.swing.ComboBoxModel;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.event.ListDataListener;
-
-import java.awt.event.WindowAdapter;
-import java.util.ArrayList;
 
 import Model.Language;
-import Model.Set;
 
 public class CreateSetFrame extends JFrame {
 	
