@@ -17,10 +17,10 @@ import View.SetFrame;
 
 public class CardController {
 	private Set set;
-	private JFrame parentFrame;
+	private SetFrame parentFrame;
 	private CardDialogFrame cardFrame;
 	
-	public CardController(Set set, JFrame parentFrame)
+	public CardController(Set set, SetFrame parentFrame)
 	{
 		this.set = set;
 		this.parentFrame = parentFrame;
@@ -47,6 +47,8 @@ public class CardController {
 		public void actionPerformed(ActionEvent e)
 		{
 			set.addCard(new Card(set.getFirstLanguage(), set.getSecondLanguage(), new Word(cardFrame.getFirstWord()), cardFrame.getsecondWords()));
+			parentFrame.setCards(set.getCards().toArray(new Card[3]));
+			cardFrame.dispatchEvent(new WindowEvent(cardFrame, WindowEvent.WINDOW_CLOSING));
 		}
 	}
 

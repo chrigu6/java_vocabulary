@@ -29,6 +29,10 @@ public class Word implements Serializable{
 		Language = language;
 	}
 	
+	public String toString()
+	{
+		return this.word;
+	}
 	
 
 }

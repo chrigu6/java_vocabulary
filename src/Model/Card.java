@@ -60,4 +60,9 @@ public class Card implements Serializable{
 	public void setSecondLanguageWords(ArrayList<Word> secondLanguageWords) {
 		this.secondLanguageWords = secondLanguageWords;
 	}
+	
+	public String toString()
+	{
+		return this.getFirstLanguageWord().toString();
+	}
 }

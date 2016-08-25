@@ -27,6 +27,7 @@ public class SetFrame extends JFrame {
 		this.cardJList = new JList<Card>();
 		c.gridx = 0;
 		c.gridy = 1;
+		this.cardJList.setListData(this.set.getCards().toArray(new Card[3]));
 		this.add(this.cardJList, c);
 		
 		this.addCardButton = new JButton("Add card");
@@ -44,6 +45,10 @@ public class SetFrame extends JFrame {
 	public void addCardButtonClickedActionListener(ActionListener listener)
 	{
 		this.addCardButton.addActionListener(listener);
+	}
+	
+	public void setCards(Card[] array) {
+		this.cardJList.setListData(array);
 	}
 
 }

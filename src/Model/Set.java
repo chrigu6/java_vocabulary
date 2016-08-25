@@ -12,6 +12,7 @@ public class Set implements Serializable{
 	public Set(String name)
 	{
 		this.name = name;
+		this.cards = new ArrayList<Card>();
 		
 	}
 	
@@ -20,6 +21,7 @@ public class Set implements Serializable{
 		this.name = name;
 		this.firstLanguage = firstLanguage;
 		this.secondLanguage = secondLanguage;
+		this.cards = new ArrayList<Card>();
 	}
 	
 	//Methods
