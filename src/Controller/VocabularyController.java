@@ -69,8 +69,20 @@ public class VocabularyController {
 	class OpenSetButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent e)
 		{
-			vocabularyFrame.setEnabled(false);
-			SetController controller = new SetController(vocabularyFrame.getSelectedSet(), vocabularyFrame);
+			Set selectedSet = vocabularyFrame.getSelectedSet();
+			
+			if(selectedSet != null)
+			{
+				vocabularyFrame.setEnabled(false);
+				SetController controller = new SetController(selectedSet, vocabularyFrame);
+			}
+			
+			else
+			{
+				
+			}
+			
+			
 		}
 	}
 	
